@@ -1,10 +1,14 @@
 import Vue from 'vue'
-import app from './app.vue'
+import App from './App.vue'
+import store from './vuex/store'
 
-import store from './store'
+import './main.css'
 
 new Vue({
   el: '#app',
-  render: h => h(app),
-  store, // 注册vuex的store对象-->组件对象多了一个属性: $store
+  components: {
+    App
+  },
+  template: '<App/>',
+  store
 })
