@@ -10,12 +10,10 @@
 
 <script>
 
-  import {mapState, mapGetters, mapActions} from 'vuex'
-
   export default {
 
 
-    /*computed: {
+    computed: {
       count () {
         return this.$store.state.count
       },
@@ -23,14 +21,9 @@
       oddOrEven () {
         return this.$store.getters.oddOrEven
       }
-    },*/
-
-    computed: {
-      ...mapState(['count']),   // {count (){return this.$store.state.count}}
-      ...mapGetters(['oddOrEven']),
     },
 
-    /*methods: {
+    methods: {
       increment () {
         this.$store.dispatch('increment')
       },
@@ -44,12 +37,8 @@
       },
 
       incrementAsync () {
-        console.log('xxx')
         this.$store.dispatch('incrementAsync')
       }
-    }*/
-    methods: {
-      ...mapActions(['increment', 'decrement', 'incrementIfOdd', 'incrementAsync'])
     }
   }
 </script>
