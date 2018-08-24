@@ -1,12 +1,14 @@
 import Vue from 'vue'
-import App from './components/app'
-import store from './store'
+import App from './App.vue'
+import store from './vuex/store'
 
-import './base.css'
+import './main.css'
 
-/* eslint-disable no-new */
 new Vue({
   el: '#app',
-  render: h => h(App),
+  components: {
+    App
+  },
+  template: '<App/>',
   store
 })
